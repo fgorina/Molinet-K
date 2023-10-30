@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF9D7C272AE97C0300B6DC96 /* HelloMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C262AE97C0300B6DC96 /* HelloMessage.swift */; };
+		EF9D7C292AE9856700B6DC96 /* LoginMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C282AE9856700B6DC96 /* LoginMessage.swift */; };
+		EF9D7C2B2AE98A6D00B6DC96 /* UpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C2A2AE98A6D00B6DC96 /* UpdateMessage.swift */; };
+		EF9D7C2D2AEBCF7D00B6DC96 /* Double+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C2C2AEBCF7C00B6DC96 /* Double+Format.swift */; };
 		EFB153972AE8179000407F9D /* Molinet_KApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153962AE8179000407F9D /* Molinet_KApp.swift */; };
 		EFB153992AE8179000407F9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153982AE8179000407F9D /* ContentView.swift */; };
 		EFB1539B2AE8179100407F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB1539A2AE8179100407F9D /* Assets.xcassets */; };
 		EFB1539E2AE8179100407F9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB1539D2AE8179100407F9D /* Preview Assets.xcassets */; };
+		EFB153A52AE81E5600407F9D /* SignalKServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153A42AE81E5600407F9D /* SignalKServer.swift */; };
+		EFB153A72AE821F000407F9D /* Loggger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */; };
+		EFEBA8F22AEFA4E30007C931 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F12AEFA4E30007C931 /* Alert.swift */; };
+		EFEBA8F42AEFA9BD0007C931 /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F32AEFA9BD0007C931 /* Configure.swift */; };
+		EFEBA8F62AEFB2840007C931 /* NumberAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF9D7C262AE97C0300B6DC96 /* HelloMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMessage.swift; sourceTree = "<group>"; };
+		EF9D7C282AE9856700B6DC96 /* LoginMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMessage.swift; sourceTree = "<group>"; };
+		EF9D7C2A2AE98A6D00B6DC96 /* UpdateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMessage.swift; sourceTree = "<group>"; };
+		EF9D7C2C2AEBCF7C00B6DC96 /* Double+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Format.swift"; sourceTree = "<group>"; };
 		EFB153932AE8179000407F9D /* Molinet K.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Molinet K.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB153962AE8179000407F9D /* Molinet_KApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molinet_KApp.swift; sourceTree = "<group>"; };
 		EFB153982AE8179000407F9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFB1539A2AE8179100407F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFB1539D2AE8179100407F9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFB153A42AE81E5600407F9D /* SignalKServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalKServer.swift; sourceTree = "<group>"; };
+		EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loggger+Extensions.swift"; sourceTree = "<group>"; };
+		EFEBA8F12AEFA4E30007C931 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		EFEBA8F32AEFA9BD0007C931 /* Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
+		EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,15 @@
 				EFB153982AE8179000407F9D /* ContentView.swift */,
 				EFB1539A2AE8179100407F9D /* Assets.xcassets */,
 				EFB1539C2AE8179100407F9D /* Preview Content */,
+				EFB153A42AE81E5600407F9D /* SignalKServer.swift */,
+				EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */,
+				EF9D7C262AE97C0300B6DC96 /* HelloMessage.swift */,
+				EF9D7C282AE9856700B6DC96 /* LoginMessage.swift */,
+				EF9D7C2A2AE98A6D00B6DC96 /* UpdateMessage.swift */,
+				EF9D7C2C2AEBCF7C00B6DC96 /* Double+Format.swift */,
+				EFEBA8F12AEFA4E30007C931 /* Alert.swift */,
+				EFEBA8F32AEFA9BD0007C931 /* Configure.swift */,
+				EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */,
 			);
 			path = "Molinet K";
 			sourceTree = "<group>";
@@ -137,7 +164,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEBA8F22AEFA4E30007C931 /* Alert.swift in Sources */,
 				EFB153992AE8179000407F9D /* ContentView.swift in Sources */,
+				EF9D7C292AE9856700B6DC96 /* LoginMessage.swift in Sources */,
+				EF9D7C272AE97C0300B6DC96 /* HelloMessage.swift in Sources */,
+				EFEBA8F42AEFA9BD0007C931 /* Configure.swift in Sources */,
+				EFB153A72AE821F000407F9D /* Loggger+Extensions.swift in Sources */,
+				EF9D7C2B2AE98A6D00B6DC96 /* UpdateMessage.swift in Sources */,
+				EFEBA8F62AEFB2840007C931 /* NumberAlert.swift in Sources */,
+				EF9D7C2D2AEBCF7D00B6DC96 /* Double+Format.swift in Sources */,
+				EFB153A52AE81E5600407F9D /* SignalKServer.swift in Sources */,
 				EFB153972AE8179000407F9D /* Molinet_KApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,11 +311,13 @@
 				DEVELOPMENT_TEAM = N72U6DTDRE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +325,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,11 +345,13 @@
 				DEVELOPMENT_TEAM = N72U6DTDRE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

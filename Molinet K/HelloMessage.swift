@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct HelloMessage : Codable{
+    var name : String
+    var version : String
+    var me : String
+    
+    enum CodingKeys: String, CodingKey{
+        case name = "name"
+        case version = "version"
+        case me = "self"
+       
+    }
+
+}
