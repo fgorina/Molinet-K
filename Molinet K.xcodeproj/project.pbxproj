@@ -17,8 +17,10 @@
 		EFB1539E2AE8179100407F9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB1539D2AE8179100407F9D /* Preview Assets.xcassets */; };
 		EFB153A52AE81E5600407F9D /* SignalKServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153A42AE81E5600407F9D /* SignalKServer.swift */; };
 		EFB153A72AE821F000407F9D /* Loggger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */; };
+		EFC248562B18E05100EA1C61 /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248552B18E05000EA1C61 /* BLECentralManager.swift */; };
+		EFC248592B1A370D00EA1C61 /* DeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248582B1A370D00EA1C61 /* DeviceState.swift */; };
 		EFEBA8F22AEFA4E30007C931 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F12AEFA4E30007C931 /* Alert.swift */; };
-		EFEBA8F42AEFA9BD0007C931 /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F32AEFA9BD0007C931 /* Configure.swift */; };
+		EFEBA8F42AEFA9BD0007C931 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F32AEFA9BD0007C931 /* ConfigView.swift */; };
 		EFEBA8F62AEFB2840007C931 /* NumberAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +36,11 @@
 		EFB1539D2AE8179100407F9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFB153A42AE81E5600407F9D /* SignalKServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalKServer.swift; sourceTree = "<group>"; };
 		EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loggger+Extensions.swift"; sourceTree = "<group>"; };
+		EFC248552B18E05000EA1C61 /* BLECentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
+		EFC248572B18F32200EA1C61 /* Molinet-K-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Molinet-K-Info.plist"; sourceTree = SOURCE_ROOT; };
+		EFC248582B1A370D00EA1C61 /* DeviceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceState.swift; sourceTree = "<group>"; };
 		EFEBA8F12AEFA4E30007C931 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		EFEBA8F32AEFA9BD0007C931 /* Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
+		EFEBA8F32AEFA9BD0007C931 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,19 +74,16 @@
 		EFB153952AE8179000407F9D /* Molinet K */ = {
 			isa = PBXGroup;
 			children = (
+				EFC248572B18F32200EA1C61 /* Molinet-K-Info.plist */,
+				EFEBA8F82AEFE6600007C931 /* Utilities */,
+				EFEBA8F72AEFE64A0007C931 /* Messages */,
 				EFB153962AE8179000407F9D /* Molinet_KApp.swift */,
 				EFB153982AE8179000407F9D /* ContentView.swift */,
+				EFB153A42AE81E5600407F9D /* SignalKServer.swift */,
+				EFEBA8F32AEFA9BD0007C931 /* ConfigView.swift */,
+				EFC248552B18E05000EA1C61 /* BLECentralManager.swift */,
 				EFB1539A2AE8179100407F9D /* Assets.xcassets */,
 				EFB1539C2AE8179100407F9D /* Preview Content */,
-				EFB153A42AE81E5600407F9D /* SignalKServer.swift */,
-				EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */,
-				EF9D7C262AE97C0300B6DC96 /* HelloMessage.swift */,
-				EF9D7C282AE9856700B6DC96 /* LoginMessage.swift */,
-				EF9D7C2A2AE98A6D00B6DC96 /* UpdateMessage.swift */,
-				EF9D7C2C2AEBCF7C00B6DC96 /* Double+Format.swift */,
-				EFEBA8F12AEFA4E30007C931 /* Alert.swift */,
-				EFEBA8F32AEFA9BD0007C931 /* Configure.swift */,
-				EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */,
 			);
 			path = "Molinet K";
 			sourceTree = "<group>";
@@ -92,6 +94,28 @@
 				EFB1539D2AE8179100407F9D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFEBA8F72AEFE64A0007C931 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D7C2A2AE98A6D00B6DC96 /* UpdateMessage.swift */,
+				EF9D7C282AE9856700B6DC96 /* LoginMessage.swift */,
+				EF9D7C262AE97C0300B6DC96 /* HelloMessage.swift */,
+				EFC248582B1A370D00EA1C61 /* DeviceState.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		EFEBA8F82AEFE6600007C931 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */,
+				EF9D7C2C2AEBCF7C00B6DC96 /* Double+Format.swift */,
+				EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */,
+				EFEBA8F12AEFA4E30007C931 /* Alert.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC248592B1A370D00EA1C61 /* DeviceState.swift in Sources */,
 				EFEBA8F22AEFA4E30007C931 /* Alert.swift in Sources */,
+				EFC248562B18E05100EA1C61 /* BLECentralManager.swift in Sources */,
 				EFB153992AE8179000407F9D /* ContentView.swift in Sources */,
 				EF9D7C292AE9856700B6DC96 /* LoginMessage.swift in Sources */,
 				EF9D7C272AE97C0300B6DC96 /* HelloMessage.swift in Sources */,
-				EFEBA8F42AEFA9BD0007C931 /* Configure.swift in Sources */,
+				EFEBA8F42AEFA9BD0007C931 /* ConfigView.swift in Sources */,
 				EFB153A72AE821F000407F9D /* Loggger+Extensions.swift in Sources */,
 				EF9D7C2B2AE98A6D00B6DC96 /* UpdateMessage.swift in Sources */,
 				EFEBA8F62AEFB2840007C931 /* NumberAlert.swift in Sources */,
@@ -311,7 +337,11 @@
 				DEVELOPMENT_TEAM = N72U6DTDRE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Molinet-K-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,7 +375,11 @@
 				DEVELOPMENT_TEAM = N72U6DTDRE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Molinet-K-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

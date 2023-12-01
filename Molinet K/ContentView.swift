@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @Environment(\.scenePhase) var phase : ScenePhase
     
-    @ObservedObject var server = SignalKServer.shared
+   // @ObservedObject var server = SignalKServer.shared
     
     @State var showConfig = false
     @State var askDepth = false
@@ -20,6 +20,8 @@ struct ContentView: View {
     @State var askQuantityUp = false
     @State var askQuantityDown = false
     @State var depth = 0.0
+    
+    @ObservedObject var server = BLECentralManager.shared
     
     var body: some View {
         ZStack{
@@ -92,7 +94,7 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
                     }
-                    .buttonStyle(PrimaryButtonStyle())
+                    .buttonStyle(PrimaryButtonStyle(backgroundColor: server.state == .Up ? .pink : Color(UIColor.secondarySystemFill)))
                     .frame(width: 150)
                     .simultaneousGesture(TapGesture().onEnded { _ in
                         server.up()
@@ -105,14 +107,14 @@ struct ContentView: View {
                     
                     
                     Button(action: {
-                     
+                        
                     }){
                         Image(systemName: "arrowtriangle.down.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
                     }
-                     .buttonStyle(PrimaryButtonStyle())
+                    .buttonStyle(PrimaryButtonStyle(backgroundColor: server.state == .Down ? .pink : Color(UIColor.secondarySystemFill)))
                     .frame(width: 150)
                     .simultaneousGesture(TapGesture().onEnded { _ in
                         server.down()
@@ -132,7 +134,7 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
                     }
-                    .buttonStyle(PrimaryButtonStyle())
+                    .buttonStyle(PrimaryButtonStyle(backgroundColor: server.operation == .levar ? .pink : Color(UIColor.secondarySystemFill)))
                     .frame(width: 80, height: 80)
                     
                     Spacer()
@@ -143,7 +145,7 @@ struct ContentView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
-                    }.buttonStyle(PrimaryButtonStyle())
+                    }.buttonStyle(PrimaryButtonStyle(backgroundColor: server.operation == .pendura ? .pink : Color(UIColor.secondarySystemFill)))
                         .frame(width: 80, height: 80)
                     
                     Spacer()
@@ -157,7 +159,7 @@ struct ContentView: View {
                     }
                     
                     
-                    .buttonStyle(PrimaryButtonStyle())
+                    .buttonStyle(PrimaryButtonStyle(backgroundColor: server.operation == .fondeixar ? .pink : Color(UIColor.secondarySystemFill)))
                     .frame(width: 80, height: 80)
                     
                 }
@@ -197,7 +199,7 @@ struct ContentView: View {
                     }
                 }.frame(width: 300, height: 300)
             }
-
+            
             if askTarget {
                 NumberAlert(title: "Cadena", prompt: "Entreu la longitut de cadena desitjada en m", isShown: $askTarget) { v in
                     
@@ -213,16 +215,12 @@ struct ContentView: View {
             switch newPhase {
                 
             case .active:
-                do{
-                    try server.connect()
-                }catch{
-                    Logger.signalk.error("Error al connectar al servidor \(error.localizedDescription)")
-                }
+               server.connect()
                 
+                break;
             case .inactive:
-                
-                server.close()
-                
+              server.close()
+                break;
             default:
                 break
             }

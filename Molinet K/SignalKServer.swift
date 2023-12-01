@@ -2,6 +2,9 @@
 //  SignalKServer.swift
 //  Molinet K
 //
+//  Connecta amb el servidor de SignalK i efectua les transaccions
+//  Faltaria incloure la part de llegir fondaria però haurem de esperart a tenie una sonda connectada
+//
 //  Created by Francisco Gorina Vanrell on 24/10/23.
 //
 
@@ -38,6 +41,22 @@ enum WindlassState : Int {
             return "Error"
         }
     }
+    
+    init(_ c : Character){
+        switch(c){
+        case "U":
+            self = .Up
+            
+        case "D":
+            self = .Down
+            
+        case "S":
+            self = .Stopped
+            
+        default:
+            self = .Error
+        }
+    }
 }
 
 enum OperationState {
@@ -53,7 +72,7 @@ public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URL
     
     var session : URLSession?
     
-    var server : String = "ws://signalk.local:3000/signalk/v1/stream?subscribe=none"
+    var server : String = "ws://10.10.10.1:3000/signalk/v1/stream?subscribe=none"
     var wssTask  : URLSessionWebSocketTask?
     var receiveTask : Task<Int, Never>?
     var commandTask : Task<Int, Never>?
