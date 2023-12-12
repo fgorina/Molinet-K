@@ -16,6 +16,13 @@ enum OperationState {
     case fondeixar
     case levar
 }
+enum LoginState {
+    case notConnected
+    case connected
+    case receivedHelo
+    case identified
+    case subscribed
+}
 
 enum WindlassState : Int {
     case Down = 1

@@ -60,7 +60,7 @@ struct ContentView: View {
                     
                 }
                 .frame(width: 330, height: 180.0)
-                .background(server.isReceiving ? Color(UIColor.secondarySystemBackground) : Color.pink)
+                .background(server.connectionState == .connected ? Color(UIColor.secondarySystemBackground) : Color.pink)
                 .cornerRadius(20)
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .onTapGesture {
@@ -76,7 +76,7 @@ struct ContentView: View {
                         Text("m")
                     }.padding(EdgeInsets(top: 5.0, leading: 10.0, bottom: 10.0, trailing: 10.0))
                 }.frame(width: 330, height: 60.0)
-                    .background(server.isReceiving ? Color(UIColor.secondarySystemBackground) : Color.pink)
+                    .background(server.connectionState == .connected ? Color(UIColor.secondarySystemBackground) : Color.pink)
                     .cornerRadius(20)
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     .onTapGesture {

@@ -19,10 +19,53 @@
 		EFB153A72AE821F000407F9D /* Loggger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */; };
 		EFC248562B18E05100EA1C61 /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248552B18E05000EA1C61 /* BLECentralManager.swift */; };
 		EFC248592B1A370D00EA1C61 /* DeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248582B1A370D00EA1C61 /* DeviceState.swift */; };
+		EFD4C2BE2B259D70005946AA /* Molinet K.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFD4C2BD2B259D70005946AA /* Molinet K.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFD4C2C32B259D70005946AA /* Molinet_K_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4C2C22B259D70005946AA /* Molinet_K_WatchApp.swift */; };
+		EFD4C2C52B259D70005946AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4C2C42B259D70005946AA /* ContentView.swift */; };
+		EFD4C2C72B259D72005946AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD4C2C62B259D72005946AA /* Assets.xcassets */; };
+		EFD4C2CA2B259D72005946AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD4C2C92B259D72005946AA /* Preview Assets.xcassets */; };
+		EFD4C2CD2B259D72005946AA /* Molinet K Watch.app in Resources */ = {isa = PBXBuildFile; fileRef = EFD4C2B82B259D70005946AA /* Molinet K Watch.app */; };
+		EFDE14072B28B885005FA315 /* Double+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C2C2AEBCF7C00B6DC96 /* Double+Format.swift */; };
+		EFDE14082B28B895005FA315 /* UpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C2A2AE98A6D00B6DC96 /* UpdateMessage.swift */; };
+		EFDE14092B28B898005FA315 /* LoginMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C282AE9856700B6DC96 /* LoginMessage.swift */; };
+		EFDE140A2B28B89B005FA315 /* HelloMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7C262AE97C0300B6DC96 /* HelloMessage.swift */; };
+		EFDE140B2B28B89F005FA315 /* DeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248582B1A370D00EA1C61 /* DeviceState.swift */; };
+		EFDE140C2B28B922005FA315 /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248552B18E05000EA1C61 /* BLECentralManager.swift */; };
 		EFEBA8F22AEFA4E30007C931 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F12AEFA4E30007C931 /* Alert.swift */; };
 		EFEBA8F42AEFA9BD0007C931 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F32AEFA9BD0007C931 /* ConfigView.swift */; };
 		EFEBA8F62AEFB2840007C931 /* NumberAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFD4C2BF2B259D70005946AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFB1538B2AE8179000407F9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFD4C2BC2B259D70005946AA;
+			remoteInfo = "Molinet K Watch Watch App";
+		};
+		EFD4C2CB2B259D72005946AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFB1538B2AE8179000407F9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFD4C2B72B259D70005946AA;
+			remoteInfo = "Molinet K Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFD4C2D02B259D72005946AA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EFD4C2BE2B259D70005946AA /* Molinet K.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EF9D7C262AE97C0300B6DC96 /* HelloMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMessage.swift; sourceTree = "<group>"; };
@@ -39,6 +82,12 @@
 		EFC248552B18E05000EA1C61 /* BLECentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
 		EFC248572B18F32200EA1C61 /* Molinet-K-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Molinet-K-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EFC248582B1A370D00EA1C61 /* DeviceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceState.swift; sourceTree = "<group>"; };
+		EFD4C2B82B259D70005946AA /* Molinet K Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Molinet K Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD4C2BD2B259D70005946AA /* Molinet K.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Molinet K.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD4C2C22B259D70005946AA /* Molinet_K_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molinet_K_WatchApp.swift; sourceTree = "<group>"; };
+		EFD4C2C42B259D70005946AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EFD4C2C62B259D72005946AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFD4C2C92B259D72005946AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFEBA8F12AEFA4E30007C931 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		EFEBA8F32AEFA9BD0007C931 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		EFEBA8F52AEFB2840007C931 /* NumberAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAlert.swift; sourceTree = "<group>"; };
@@ -52,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFD4C2BA2B259D70005946AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				EFB153952AE8179000407F9D /* Molinet K */,
+				EFD4C2C12B259D70005946AA /* Molinet K Watch Watch App */,
 				EFB153942AE8179000407F9D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				EFB153932AE8179000407F9D /* Molinet K.app */,
+				EFD4C2B82B259D70005946AA /* Molinet K Watch.app */,
+				EFD4C2BD2B259D70005946AA /* Molinet K.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +151,25 @@
 			isa = PBXGroup;
 			children = (
 				EFB1539D2AE8179100407F9D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFD4C2C12B259D70005946AA /* Molinet K Watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				EFD4C2C22B259D70005946AA /* Molinet_K_WatchApp.swift */,
+				EFD4C2C42B259D70005946AA /* ContentView.swift */,
+				EFD4C2C62B259D72005946AA /* Assets.xcassets */,
+				EFD4C2C82B259D72005946AA /* Preview Content */,
+			);
+			path = "Molinet K Watch Watch App";
+			sourceTree = "<group>";
+		};
+		EFD4C2C82B259D72005946AA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EFD4C2C92B259D72005946AA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -132,10 +210,45 @@
 			buildRules = (
 			);
 			dependencies = (
+				EFD4C2CC2B259D72005946AA /* PBXTargetDependency */,
 			);
 			name = "Molinet K";
 			productName = "Molinet K";
 			productReference = EFB153932AE8179000407F9D /* Molinet K.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFD4C2B72B259D70005946AA /* Molinet K Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD4C2D42B259D72005946AA /* Build configuration list for PBXNativeTarget "Molinet K Watch" */;
+			buildPhases = (
+				EFD4C2B62B259D70005946AA /* Resources */,
+				EFD4C2D02B259D72005946AA /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFD4C2C02B259D70005946AA /* PBXTargetDependency */,
+			);
+			name = "Molinet K Watch";
+			productName = "Molinet K Watch";
+			productReference = EFD4C2B82B259D70005946AA /* Molinet K Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		EFD4C2BC2B259D70005946AA /* Molinet K Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD4C2D32B259D72005946AA /* Build configuration list for PBXNativeTarget "Molinet K Watch Watch App" */;
+			buildPhases = (
+				EFD4C2B92B259D70005946AA /* Sources */,
+				EFD4C2BA2B259D70005946AA /* Frameworks */,
+				EFD4C2BB2B259D70005946AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Molinet K Watch Watch App";
+			productName = "Molinet K Watch Watch App";
+			productReference = EFD4C2BD2B259D70005946AA /* Molinet K.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,6 +262,12 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EFB153922AE8179000407F9D = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					EFD4C2B72B259D70005946AA = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					EFD4C2BC2B259D70005946AA = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -167,6 +286,8 @@
 			projectRoot = "";
 			targets = (
 				EFB153922AE8179000407F9D /* Molinet K */,
+				EFD4C2B72B259D70005946AA /* Molinet K Watch */,
+				EFD4C2BC2B259D70005946AA /* Molinet K Watch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -176,8 +297,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD4C2CD2B259D72005946AA /* Molinet K Watch.app in Resources */,
 				EFB1539E2AE8179100407F9D /* Preview Assets.xcassets in Resources */,
 				EFB1539B2AE8179100407F9D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD4C2B62B259D70005946AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD4C2BB2B259D70005946AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD4C2CA2B259D72005946AA /* Preview Assets.xcassets in Resources */,
+				EFD4C2C72B259D72005946AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +342,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFD4C2B92B259D70005946AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDE14092B28B898005FA315 /* LoginMessage.swift in Sources */,
+				EFDE140C2B28B922005FA315 /* BLECentralManager.swift in Sources */,
+				EFDE14072B28B885005FA315 /* Double+Format.swift in Sources */,
+				EFD4C2C52B259D70005946AA /* ContentView.swift in Sources */,
+				EFDE140A2B28B89B005FA315 /* HelloMessage.swift in Sources */,
+				EFDE140B2B28B89F005FA315 /* DeviceState.swift in Sources */,
+				EFDE14082B28B895005FA315 /* UpdateMessage.swift in Sources */,
+				EFD4C2C32B259D70005946AA /* Molinet_K_WatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFD4C2C02B259D70005946AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFD4C2BC2B259D70005946AA /* Molinet K Watch Watch App */;
+			targetProxy = EFD4C2BF2B259D70005946AA /* PBXContainerItemProxy */;
+		};
+		EFD4C2CC2B259D72005946AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFD4C2B72B259D70005946AA /* Molinet K Watch */;
+			targetProxy = EFD4C2CB2B259D72005946AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EFB1539F2AE8179100407F9D /* Debug */ = {
@@ -267,6 +433,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -323,6 +490,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -402,6 +570,98 @@
 			};
 			name = Release;
 		};
+		EFD4C2CE2B259D72005946AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N72U6DTDRE;
+				INFOPLIST_KEY_CFBundleDisplayName = "Molinet K Watch";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EFD4C2CF2B259D72005946AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N72U6DTDRE;
+				INFOPLIST_KEY_CFBundleDisplayName = "Molinet K Watch";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EFD4C2D12B259D72005946AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Molinet K Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = N72U6DTDRE;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K-Watch.watchkitapp";
+				PRODUCT_NAME = "Molinet K";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		EFD4C2D22B259D72005946AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Molinet K Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = N72U6DTDRE;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K-Watch.watchkitapp";
+				PRODUCT_NAME = "Molinet K";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +679,24 @@
 			buildConfigurations = (
 				EFB153A22AE8179100407F9D /* Debug */,
 				EFB153A32AE8179100407F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD4C2D32B259D72005946AA /* Build configuration list for PBXNativeTarget "Molinet K Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD4C2D12B259D72005946AA /* Debug */,
+				EFD4C2D22B259D72005946AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD4C2D42B259D72005946AA /* Build configuration list for PBXNativeTarget "Molinet K Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD4C2CE2B259D72005946AA /* Debug */,
+				EFD4C2CF2B259D72005946AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

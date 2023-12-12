@@ -20,51 +20,7 @@ enum LoginState {
     case subscribed
 }
 
-enum WindlassState : Int {
-    case Down = 1
-    case Stopped = 0
-    case Up = -1
-    case Error = 2
-    
-    var description : String {
-        switch(self){
-        case .Down:
-            return "Down"
-            
-        case .Stopped:
-            return "Stopped"
-            
-        case .Up:
-            return "Up"
-            
-        default:
-            return "Error"
-        }
-    }
-    
-    init(_ c : Character){
-        switch(c){
-        case "U":
-            self = .Up
-            
-        case "D":
-            self = .Down
-            
-        case "S":
-            self = .Stopped
-            
-        default:
-            self = .Error
-        }
-    }
-}
 
-enum OperationState {
-    case manual
-    case pendura
-    case fondeixar
-    case levar
-}
 
 public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URLSessionWebSocketDelegate{
     

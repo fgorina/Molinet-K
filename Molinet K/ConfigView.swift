@@ -197,7 +197,7 @@ struct ConfigView : View {
             
             Spacer()
             Button("Reconnect"){
-                if !BLECentralManager.shared.isReceiving {
+                if BLECentralManager.shared.connectionState != .connected {
                     BLECentralManager.shared.connect()
                     
                 }
