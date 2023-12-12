@@ -20,15 +20,11 @@ enum LoginState {
     case subscribed
 }
 
-
-
 public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URLSessionWebSocketDelegate{
-    
-    static var shared : SignalKServer = SignalKServer()
     
     var session : URLSession?
     
-    var server : String = "ws://10.10.10.1:3000/signalk/v1/stream?subscribe=none"
+    var server : String  //"ws://10.10.10.1:3000/signalk/v1/stream?subscribe=none"
     var wssTask  : URLSessionWebSocketTask?
     var receiveTask : Task<Int, Never>?
     var commandTask : Task<Int, Never>?
@@ -56,33 +52,13 @@ public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URL
     let subscribeCommand = """
     {"context":"vessels.self",
     "subscribe": [
-        {"path": "windlass.state", "policy": "instant"},
-        {"path": "windlass.chain", "policy": "instant"}
+        {"path": "environment.depth.belowTransducer", "policy": "instant"}
     ]}
 """
     
-    let updateCommand = """
-{
-    "token":"$T",
-  "context": "vessels.self",
-  "updates": [
-    {
-    "source":{
-        "label":"Anchor K",
-        "type": "signalk"
-        },
 
-      "values": [
-        {
-          "path": "windlass.command",
-          "value": "$V"
-        }
-      ]
-    }
-  ]
-}
-"""
-    override init(){
+    init(host : String, port: Int, path: String = "/signalk/v1/stream?subscribe=none"){
+        server = "ws://\(host):\(port)\(path)"
         super.init()
         Task{
             do {
@@ -93,157 +69,7 @@ public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URL
         }
     }
     
-    func up(_ op : OperationState = .manual){
-        if op == .fondeixar {
-            operation = .manual
-            return
-        }
-        
-        commandTask = Task<Int, Never>{
-            
-            
-            do {
-                operation = op
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: "U")
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending up message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
-    
-    func down(_ op : OperationState = .manual){
-        
-        if op == .levar {
-            operation = .manual
-            return
-        }
-        
-        commandTask = Task<Int, Never>{
-            do {
-                operation = op
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: "D")
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending down message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
-    
-    func stop(){
-        commandTask = Task<Int, Never>{
-            do {
-                operation = .manual
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: "S")
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending stop message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
-    
-    func resetChain(){
-        commandTask = Task<Int, Never>{
-            do {
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: "R")
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending Resetting chain message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
-    
-    func goto(_ m : Double){
-        commandTask = Task<Int, Never>{
-            do {
-                let command = "G\(m)"
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: command)
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending Resetting chain message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
-    func move(_ m : Double){        // m may be + (baixar) or - (pujar)
-        commandTask = Task<Int, Never>{
-            do {
-                let command = "L\(m)"
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: command)
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending Resetting chain message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
-    
-    func setMaxChain(_ m : Double){        // m may be + (baixar) or - (pujar)
-        commandTask = Task<Int, Never>{
-            do {
-                let command = "M\(m)"
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: command)
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending setMaxChain message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
-    
-    func calibrate(_ m : Double){        // m may be + (baixar) or - (pujar)
-        commandTask = Task<Int, Never>{
-            do {
-                let command = "C\(m)"
-                let msg = updateCommand.replacingOccurrences(of: "$V", with: command)
-                    .replacingOccurrences(of: "$T", with: self.token)
-                try await sendMessage(msg)
-            }catch{
-                Logger.signalk.error("Error when sending calibrate  message: \(error.localizedDescription)")
-                return -1
-            }
-            return  1
-        }
-    }
 
-
-    
-    func fondeixar(){
-        if chain < (depth + marginDepth) {
-            goto(depth + marginDepth)
-        }
-    }
-    
-    func levar(){
-        if chain > depth  {
-            goto(depth - marginDepth)
-        }
-    }
-    
-    func pendura(){
-        operation = .pendura
-        
-        goto(penduraChain)
-        
-    }
     
     func sendMessage(_ msg : String) async  throws {
         let wsMessage = URLSessionWebSocketTask.Message.string(msg)
@@ -366,14 +192,11 @@ public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URL
                                          */
                                         
                                         
-                                    case "windlass.state":
+                                    case "environment.depth.belowTransducer":
                                         DispatchQueue.main.async{
-                                            let i = Int(updateMessage.updates[0].values[0].value)
-                                            if [-1, 0, 1].firstIndex(of: i) != nil {
-                                                self.state = WindlassState(rawValue: i)!
-                                            }else{
-                                                self.state = .Error
-                                            }
+                                            let f = Double(updateMessage.updates[0].values[0].value)
+                                            BLECentralManager.shared.depth = f
+                                            Logger.signalk.info("Received depth of \(f) m")
                                             
                                         }
                                         

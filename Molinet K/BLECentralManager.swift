@@ -76,7 +76,7 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
     private var commandCharacteristic: CBCharacteristic?
     private var windlassStateCharacteristic: CBCharacteristic?
     
-    private let penduraChain = 2.0
+    private let penduraChain = 1.0
     private let marginDepth = 1.0
     
     public var operation = OperationState.manual
@@ -84,7 +84,7 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
 
     @Published var connectionState : BLEState = .off
     @Published var chain : Double = 0.0
-    @Published var depth : Double = 10.0
+    @Published var depth : Double = 0.0
     @Published var state : WindlassState = .Stopped
     // Add other properties as needed
     
@@ -93,7 +93,9 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
     private let commandUUID = CBUUID(string: "7aa080fe-0ef8-4f0c-987f-74a636dd3a77")
     private let stateUUID = CBUUID(string: "f5c63a4c-553a-4b9f-8ece-3ebcd4da2f07")
     
-    
+    #if os(iOS)
+    private var signalkServer : SignalKServer?
+    #endif
     
     // MARK: - Initialization
     
@@ -222,6 +224,20 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
                         if c == "I" {
                             let rest = String(svalue[svalue.index(svalue.startIndex, offsetBy: 1)...])
                             deviceState = DeviceState(rest)
+                            
+                            // Start new server if possible
+                            #if os(iOS)
+                            if let sk = signalkServer  {
+                                do {
+                                    try sk.connect()
+                                }catch{
+                                    
+                                }
+                            }else{
+                                signalkServer = SignalKServer(host: deviceState.host, port: deviceState.port, path: deviceState.path)
+                            }
+
+                            #endif
                         }
                         else{
                             DispatchQueue.main.async{
@@ -295,6 +311,12 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
         
         if let peripheral = connectedPeripheral, peripheral.state == .connected {
             centralManager.cancelPeripheralConnection(peripheral)
+            
+            #if os(iOS)
+            if let sk = signalkServer {
+                sk.close()
+            }
+            #endif
         }
     }
 

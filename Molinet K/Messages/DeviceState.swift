@@ -62,10 +62,7 @@ struct DeviceState {
             isUp = Int(rows[8]) ?? 0
             isDown = Int(rows[9]) ?? 0
             wsState = WSState(rawValue: Int(rows[10]) ?? 0) ?? .disconnected
-            
-            
-            
-        }else{
+         }else{
             mmPulse =  1.0
             lChain =  0.0
             ssid = ""
