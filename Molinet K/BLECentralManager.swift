@@ -162,7 +162,9 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
         DispatchQueue.main.async {
             self.connectionState = .disconnected
         }
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Reconnect
+            self.connect()
+        }
     }
     // MARK: - CBPeripheralDelegate Methods
     
@@ -263,7 +265,7 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
     
     func startScanning() {
         // Start scanning for BLE peripherals
-        print("Starting scan for srvices \(serviceUUID.uuidString)")
+        print("Starting scan for services \(serviceUUID.uuidString)")
         centralManager.scanForPeripherals(withServices: [serviceUUID], options: nil)
         DispatchQueue.main.async {
             self.connectionState = .scanning

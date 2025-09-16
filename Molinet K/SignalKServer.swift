@@ -47,7 +47,11 @@ public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URL
     
     @Published var state : WindlassState = .Stopped
     
+    
+    
     let loginCommand =  "{\"requestId\": \"6986b469-ec48-408a-b3f5-660475208dca\", \"login\": { \"username\": \"pi\", \"password\": \"um23zap\" }}"
+    
+    //let idRequest = "{\"clientId\":\"6986b469-ec48-408a-b3f5-660475208dca\",\"description\":\"Molinet K App\"}"
     
     let subscribeCommand = """
     {"context":"vessels.self",
@@ -128,6 +132,7 @@ public class SignalKServer : NSObject, ObservableObject, URLSessionDelegate, URL
                                     self.me = helo.me
                                     self.loginState = .receivedHelo
                                     try await sendMessage(loginCommand)
+                                    //try await sendMessage(idRequest)
                                     
                                     
                                 case .receivedHelo:

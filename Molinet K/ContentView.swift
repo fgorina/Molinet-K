@@ -211,12 +211,15 @@ struct ContentView: View {
             }
             
             
-        }.onChange(of: phase, perform: { newPhase  in
+        }.onAppear(){
+            UIApplication.shared.isIdleTimerDisabled = true
+        }.onDisappear(){
+            UIApplication.shared.isIdleTimerDisabled = false
+        }.onChange(of: phase, initial: true){ oldPhase, newPhase  in
             switch newPhase {
                 
             case .active:
                server.connect()
-                
                 break;
             case .inactive:
               server.close()
@@ -224,7 +227,7 @@ struct ContentView: View {
             default:
                 break
             }
-        })
+        }
     }
 }
 

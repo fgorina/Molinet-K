@@ -19,6 +19,8 @@
 		EFB153A72AE821F000407F9D /* Loggger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB153A62AE821F000407F9D /* Loggger+Extensions.swift */; };
 		EFC248562B18E05100EA1C61 /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248552B18E05000EA1C61 /* BLECentralManager.swift */; };
 		EFC248592B1A370D00EA1C61 /* DeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC248582B1A370D00EA1C61 /* DeviceState.swift */; };
+		EFCC37D12C89C46A0023E62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD4C2C62B259D72005946AA /* Assets.xcassets */; };
+		EFCC37D22C89C46B0023E62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD4C2C62B259D72005946AA /* Assets.xcassets */; };
 		EFD4C2BE2B259D70005946AA /* Molinet K.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFD4C2BD2B259D70005946AA /* Molinet K.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFD4C2C32B259D70005946AA /* Molinet_K_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4C2C22B259D70005946AA /* Molinet_K_WatchApp.swift */; };
 		EFD4C2C52B259D70005946AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4C2C42B259D70005946AA /* ContentView.swift */; };
@@ -299,6 +301,7 @@
 			files = (
 				EFD4C2CD2B259D72005946AA /* Molinet K Watch.app in Resources */,
 				EFB1539E2AE8179100407F9D /* Preview Assets.xcassets in Resources */,
+				EFCC37D22C89C46B0023E62F /* Assets.xcassets in Resources */,
 				EFB1539B2AE8179100407F9D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCC37D12C89C46A0023E62F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Molinet K/Preview Content\"";
@@ -515,7 +520,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,6 +528,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -537,6 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Molinet K/Preview Content\"";
@@ -553,7 +560,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,6 +568,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -577,7 +585,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N72U6DTDRE;
-				INFOPLIST_KEY_CFBundleDisplayName = "Molinet K Watch";
+				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K Watch";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K-Watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,7 +601,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N72U6DTDRE;
-				INFOPLIST_KEY_CFBundleDisplayName = "Molinet K Watch";
+				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K Watch";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.gorina.Molinet-K-Watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,6 +621,7 @@
 				DEVELOPMENT_TEAM = N72U6DTDRE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -627,7 +638,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Debug;
 		};
@@ -642,6 +653,7 @@
 				DEVELOPMENT_TEAM = N72U6DTDRE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Anchor K";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to  connect to windlass or capstan";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -658,7 +670,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Release;
 		};
